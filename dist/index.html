@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Totally Real Site</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div id="search">
+        <input type="text" id="city-input" placeholder="What's the name?">
+        <button  onclick=citySerach()>Search</button>
+        
+
+    </div>
+    
+    <div class="city-container"></div>
+
+
+    <script id="city-template" type="text/x-handlebars-template">
+        {{#each city}}
+            <div class="city-box">
+                <div class="name">{{name}}</div>
+                <div class="temperature">{{temperature}}</div>
+                <div class="condition" >{{condition}}</div>
+                <div id="img-container">
+                    <img src="{{conditionPic}}" alt="">
+                </div>
+                <button id="saveCity">Save</button>
+                <button id="cityRemove">Remove</button>
+            </div>
+        {{/each}}      
+    </script>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="model.js"></script>
+    <script src="render.js"></script>
+    <script src="controller.js"></script>
+
+
+
+</body>
+
+</html>
