@@ -5,7 +5,6 @@ class Renderer {
     }
     
     renderData(cityData){
-        $('.city-container').empty()
         const source = $("#city-template").html()
         const template = Handlebars.compile(source)
         const newHtml = template({city: cityData})

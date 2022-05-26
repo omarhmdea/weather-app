@@ -32,9 +32,8 @@ router.get('/cities', async function (req, res) {
 })
 
 router.post('/city', async function (req, res) {
-    const cityData = req.body
+    const cityData = req.body.city
     const city = await City.findOne({ name: cityData.name }).exec()
-    console.log(city);
     if (!city) {
         new City(cityData).save()
         res.send(cityData)

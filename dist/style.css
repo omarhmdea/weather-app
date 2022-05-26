@@ -17,6 +17,11 @@ body {
     box-shadow: -3px 6px 2px -4px rgba(0,0,0,0.75);
 }
 
+img {
+    background-color: rgb(199, 197, 194);
+    box-shadow: 2px 2px;
+
+}
 input { 
     width: 90%;
 }
